@@ -8,18 +8,27 @@
 import React, { useState } from 'react';
 
 function Sandwich(): JSX.Element {
-    const [count, setCount] = useState<string>("");
+    const [food, setSandwich] = useState<string>("");
 
-    function handlePlusClick(): void {
-        setCount(count + 1);
+    function addBread(): void {
+        setSandwich(food + " bread ");
     }
+
+    function addSausedge(): void {
+        setSandwich(food + " sausedge ");
+    }
+
+    function addcheese(): void {
+        setSandwich(food + " cheese ");
+    }
+
     return (
         <>
             <h2>Sandwich</h2>
-            <button type="button" onClick={handlePlusClick}>Add bread</button>
-            <button type="button" onClick={handlePlusClick}>Add sausage</button>
-            <button type="button" onClick={handlePlusClick}>Add cheese</button>
-            <span> Бутерброд: {count} </span>
+            <button type="button" onClick={addBread}>Add bread</button>
+            <button type="button" onClick={addSausedge}>Add sausage</button>
+            <button type="button" onClick={addcheese}>Add cheese</button>
+            <span> "Бутерброд: {food}". </span>
         </>
     );
 }
