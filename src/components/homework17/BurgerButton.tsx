@@ -8,18 +8,21 @@
 import React, { useState } from 'react';
 
 function Sandwich(): JSX.Element {
-    const [food, setSandwich] = useState<string>("");
+    const [food, setSandwich] = useState<string>('');
 
     function addBread(): void {
-        setSandwich(food + " bread ");
+        const bread = ' bread ';
+        setSandwich(food + bread);
     }
 
     function addSausedge(): void {
-        setSandwich(food + " sausedge ");
+        const sausedge = ' sausedge ';
+        setSandwich(food + sausedge);
     }
 
     function addcheese(): void {
-        setSandwich(food + " cheese ");
+        const cheese = ' cheese ';
+        setSandwich(food + cheese);
     }
 
     return (
@@ -28,7 +31,7 @@ function Sandwich(): JSX.Element {
             <button type="button" onClick={addBread}>Add bread</button>
             <button type="button" onClick={addSausedge}>Add sausage</button>
             <button type="button" onClick={addcheese}>Add cheese</button>
-            <span> "Бутерброд: {food}". </span>
+            <span> &quot;Sandwich: {food}&quot;. </span>
         </>
     );
 }
