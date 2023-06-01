@@ -11,18 +11,26 @@ function Sandwich(): JSX.Element {
     const [food, setSandwich] = useState<string>('');
 
     function addBread(): void {
-        const bread = ' bread ';
+        const bread = ' bread';
         setSandwich(food + bread);
     }
 
     function addSausedge(): void {
-        const sausedge = ' sausedge ';
+        const sausedge = ' sausedge';
         setSandwich(food + sausedge);
     }
 
     function addcheese(): void {
-        const cheese = ' cheese ';
+        const cheese = ' cheese';
         setSandwich(food + cheese);
+    }
+
+    function handleRemoveCheese(): void {
+        setSandwich(food.replaceAll(' cheese', ''));
+    }
+
+    function handleRemoveLast():void {
+        setSandwich(food.replaceAll(/\s\w+$/g, ''));
     }
 
     return (
@@ -31,6 +39,8 @@ function Sandwich(): JSX.Element {
             <button type="button" onClick={addBread}>Add bread</button>
             <button type="button" onClick={addSausedge}>Add sausage</button>
             <button type="button" onClick={addcheese}>Add cheese</button>
+            <button type="button" onClick={handleRemoveCheese}>Delete cheese</button>
+            <button type="button" onClick={handleRemoveLast}>Delete last element</button>
             <span> &quot;Sandwich: {food}&quot;. </span>
         </>
     );
