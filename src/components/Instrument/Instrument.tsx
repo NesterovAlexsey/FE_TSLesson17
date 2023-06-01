@@ -15,11 +15,13 @@ interface Props {
 }
 
 function Instrument(props:Props): JSX.Element {
-  let { name, dateOfCreation, typeOfInstrument } = props;
+  const { name, dateOfCreation, typeOfInstrument } = props;
   return (
     <div className={styles.mainData}>
       <h2 className={styles.general}>Музыкальный инструмент</h2>
-      <p>Название: {name}; Дата производства: {dateOfCreation}; Тип инструмента: {typeOfInstrument}; </p>
+      Название: {name};
+      Дата производства: {dateOfCreation};
+      Тип инструмента: {typeOfInstrument};
     </div>
   );
 }
