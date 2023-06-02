@@ -20,7 +20,7 @@ function Parent(): JSX.Element {
   }
 
   const mikrofon: Flower = {
-    color: "lightred",
+    color: "lightcoral",
     title: "Zingiber spectabile",
     kind: "Zingiberaceae",
     price: 100,

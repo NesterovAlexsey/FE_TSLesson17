@@ -10,7 +10,7 @@ function FlowerCard ({ flower }:someProps):JSX.Element {
         color, title, kind, price,
     } = flower;
     return (
-    <div>
+    <div style={{ backgroundColor: color }}>
         <h4>Flower</h4>
         <p>{color} {title} {kind} {price}</p>
     </div>
