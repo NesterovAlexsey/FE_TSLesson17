@@ -13,23 +13,23 @@ function Parent(): JSX.Element {
   };
 
   const kaktus: Flower = {
-    color: "green",
-    title: "Sweety",
-    kind: "Cactaceae",
+    color: 'green',
+    title: 'Sweety',
+    kind: 'Cactaceae',
     price: 5,
-  }
+  };
 
   const mikrofon: Flower = {
-    color: "lightcoral",
-    title: "Zingiber spectabile",
-    kind: "Zingiberaceae",
+    color: 'lightcoral',
+    title: 'Zingiber spectabile',
+    kind: 'Zingiberaceae',
     price: 100,
-  }
+  };
 
   return (
     <div>
-      <FlowerCard flower={kaktus}/>
-      <FlowerCard flower={mikrofon}/>
+      <FlowerCard flower={kaktus} />
+      <FlowerCard flower={mikrofon} />
       <h2>Родительский компонент</h2>
       <PirateCard pirate={john} />
     </div>

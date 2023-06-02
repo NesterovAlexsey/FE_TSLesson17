@@ -1,18 +1,21 @@
 import React from 'react';
 import Flower from '../../types/Flower';
 
-interface someProps {
+interface SomeProps {
     flower : Flower;
 }
 
-function FlowerCard ({ flower }:someProps):JSX.Element {
+function FlowerCard({ flower }:SomeProps):JSX.Element {
     const {
         color, title, kind, price,
     } = flower;
     return (
     <div style={{ backgroundColor: color }}>
         <h4>Flower</h4>
-        <p>{color} {title} {kind} {price}</p>
+        <p>Color: {color}</p>
+        <p>Name: {title}</p>
+        <p>Family: {kind}</p>
+        <p>Price: {price} $</p>
     </div>
     );
 }

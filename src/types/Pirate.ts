@@ -3,6 +3,6 @@ interface Pirate {
     isDrunk: boolean;
     ship: string;
     numberOfLegs: number;
-  }
-  
-  export default Pirate;
+  };
+
+export default Pirate;
