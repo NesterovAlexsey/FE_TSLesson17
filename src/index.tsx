@@ -7,12 +7,16 @@ import Sandwich from './components/homework17/BurgerButton';
 import Car from './components/Car/Car';
 import Instrument from './components/Instrument/Instrument';
 import Parent from './components/Parent/Parent';
+import Buttons from './components/UseEffectExample/Buttons';
+import GenderIdentification from './components/GenderIdentification/GenderIndentification';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <GenderIdentification />
+    <Buttons />
     <Parent />
     <Instrument name="Gitara" dateOfCreation={1987} typeOfInstrument="струнный" />
     <Instrument name="Барабан" dateOfCreation={1600} typeOfInstrument="ударный" />
