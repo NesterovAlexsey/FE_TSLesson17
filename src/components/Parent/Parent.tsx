@@ -16,12 +16,20 @@ function Parent(): JSX.Element {
     color: "green",
     title: "Sweety",
     kind: "Cactaceae",
+    price: 5,
+  }
+
+  const mikrofon: Flower = {
+    color: "lightred",
+    title: "Zingiber spectabile",
+    kind: "Zingiberaceae",
     price: 100,
   }
 
   return (
     <div>
       <FlowerCard flower={kaktus}/>
+      <FlowerCard flower={mikrofon}/>
       <h2>Родительский компонент</h2>
       <PirateCard pirate={john} />
     </div>
