@@ -1,12 +1,20 @@
-// Задание 1
-// В компоненте Parent создайте объект цветок с полями:
+import React from 'react';
+import Flower from '../../types/Flower';
 
-// цвет
-// название
-// семейство
-// цена
-// Создайте компонент FlowerCard - карточка цветка.
-// Передайте объект-цветок в компонент пропсом.
+interface someProps {
+    flower : Flower;
+}
 
-// Пусть этот компонент отображает информацию о объекте-цветке, который передали в него пропсом.
-// Пусть шрифт информации о цвете будет сделан с background-color соответствующего цвета.
+function FlowerCard ({ flower }:someProps):JSX.Element {
+    const {
+        color, title, kind, price,
+    } = flower;
+    return (
+    <div>
+        <h4>Flower</h4>
+        <p>{color} {title} {kind} {price}</p>
+    </div>
+    );
+}
+
+export default FlowerCard;

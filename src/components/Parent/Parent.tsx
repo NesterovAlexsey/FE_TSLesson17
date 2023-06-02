@@ -1,6 +1,8 @@
 import React from 'react';
 import PirateCard from '../PirateCard/PirateCard';
 import Pirate from '../../types/Pirate';
+// import Flower from '../../types/Flower';
+// import FlowerCard from '../FlowerCard/FlowerCard';
 
 function Parent(): JSX.Element {
   const john: Pirate = {
