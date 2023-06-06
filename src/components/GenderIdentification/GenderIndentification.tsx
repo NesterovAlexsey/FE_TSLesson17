@@ -19,7 +19,7 @@ function GenderIdentification() {
     return (
         <div className={style.genderBox}>
             <h2>Узнать пол</h2>
-            <form action="">
+            <form >
                 <label htmlFor=''>Введите свое имя</label>
                 <input
                 type="text"
@@ -27,6 +27,7 @@ function GenderIdentification() {
                 onChange={(event) => setFirstName(event.target.value)}
                 />
             </form>
+            <button >выбрать пол</button>
             <div>{gender}</div>
         </div>
     );
