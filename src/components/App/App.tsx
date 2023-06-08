@@ -10,6 +10,7 @@ import GenderIdentification from '../GenderIdentification/GenderIndentification'
 import User from '../User/User';
 import Account from '../Account/Account';
 import Settings from '../Settings/Settings';
+import Shop from '../Shop/Shop';
 
 function App(): JSX.Element {
   return (
@@ -19,8 +20,8 @@ function App(): JSX.Element {
         <Route path="capital" element={<Capital />}></Route>
         <Route path="sandwich" element={<BurgerButton />} />
         <Route path="gender" element={<GenderIdentification />} />
+        <Route path="shop" element={<Shop />} />
         <Route path="/" element={<HomePage />}></Route>
-        //* - for all the other
         <Route path="*" element={<HomePage />}></Route>
         <Route path="user" element={<User />}>
           <Route path="account" element={<Account />} />
