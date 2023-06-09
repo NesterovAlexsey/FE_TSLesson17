@@ -33,7 +33,7 @@ export default function Navbar(): JSX.Element {
                     <NavLink to="gender" className={getStatus}>Identificate gender</NavLink>
                 </li>
                 <li className={styles.item}>
-                    <NavLink to="shop" className={getStatus}>Shop</NavLink>
+                    <NavLink to="products" className={getStatus}>Shop</NavLink>
                 </li>
                 <li className={styles.item}>
                     <NavLink to="user" className={getStatus}>User</NavLink>

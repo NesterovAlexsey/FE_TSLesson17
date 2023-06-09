@@ -11,6 +11,7 @@ import User from '../User/User';
 import Account from '../Account/Account';
 import Settings from '../Settings/Settings';
 import Shop from '../Shop/Shop';
+import ProductPage from '../ProductPage/ProductPage';
 
 function App(): JSX.Element {
   return (
@@ -20,14 +21,16 @@ function App(): JSX.Element {
         <Route path="capital" element={<Capital />}></Route>
         <Route path="sandwich" element={<BurgerButton />} />
         <Route path="gender" element={<GenderIdentification />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="products" element={<Shop />}>
+          <Route path=":productId" element={<ProductPage />} />
+        </Route>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="*" element={<HomePage />}></Route>
         <Route path="user" element={<User />}>
           <Route path="account" element={<Account />} />
           <Route path="settings" element={<Settings />} />
         </Route>
-    </Route>
+      </Route>
     </Routes >
   );
 }
